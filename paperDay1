@@ -1,0 +1,9 @@
+1.Context Prior for Scene Segmentation
+
+In this work, we directly supervise the feature aggregation to distinguish the intra-class and inter-class context clearly.
+
+
+with the supervision of the Affinity Loss.
+
+The learned Context Prior extracts the pixels belonging to the same category, while the reversed prior focuses on the 
+pixels of different classes.
