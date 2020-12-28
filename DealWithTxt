@@ -1,0 +1,20 @@
+def del_with_txt(fileName):
+
+    file = open('./valall.txt', 'w')
+    with open(fileName) as txtData:
+        # 读取整行
+        lines = txtData.readlines()
+        for line in lines:
+            lineData=line.strip().split('\t')
+            # 去除重复元素
+            lineData_1 = list(set(lineData))
+            lineData_1.sort(key=lineData.index)
+            file.write((lineData_1[0] + '   ' + lineData_1[2]))
+            # 写入换行符
+            file.write('\r\n')
+        # 文件关闭
+        file.close()
+    return 0
+
+if __name__ == '__main__':
+    del_with_txt('./val.txt')
